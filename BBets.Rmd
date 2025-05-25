@@ -82,6 +82,20 @@ average=mean(sMyData2)
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+MyData3= numeric(1000)
+for (i in 1:1000) {
+  MyData2[i]=BrLw(numClass = 28)
+}
+sMyData3 =sort(MyData3)
+low=sMyData3[25]
+high=sMyData3[975]
+middle=mean(sMyData3)[500]
+
+```
+
+
+## Effective Confidence interval `r low` to `r high` with average `r average`
 
 
 
@@ -93,3 +107,4 @@ average=mean(sMyData2)
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+Simulations show that Professor Brownlow’s average earnings are around $281, with a 95% confidence interval from $226 to $337—indicating consistent profit. To shift his profits toward zero, he could reduce the payout per student or adjust the win conditions. Alternatively, he could lower the class size so that, under the current rules, the expected earnings balance out. Either change would bring the average profit closer to zero.
